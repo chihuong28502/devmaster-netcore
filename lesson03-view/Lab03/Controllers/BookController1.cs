@@ -27,5 +27,11 @@ namespace Lab03.Controllers
             var model = book.GetBookById(id);
             return View(model);
         }
+        public PartialViewResult PopularBook()
+        {
+            var books = book.GetBookList();
+            return PartialView(books);
+
+        }
     }
 }
